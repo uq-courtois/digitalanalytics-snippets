@@ -1,5 +1,5 @@
 # The code below is riddled with common mistakes that lead to syntax errors
-# Run the and try to correct all of them so the code runs flawlessly
+# Run and try to correct all of them so the code runs flawlessly
 
 print('this is some text)
 
