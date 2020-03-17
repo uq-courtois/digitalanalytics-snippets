@@ -1,7 +1,7 @@
 # Goal of this program is to filter all string values from a list
 # named originallist and store them in a new list named stringlist
 # At the end, the contents of the variable stringlist should be printed
-# Correct the program so it does that, and just that...
+# just once. Correct the program so it does that, and just that...
 
 originallist = [4,3,'Erik',5,4,'Johanna',3,1,'Marcela']
 stringlist = []
