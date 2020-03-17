@@ -3,7 +3,8 @@
 # Print the first five urls that contain an .au domain form the list urls
 
 # TIP 1: use a variable 'count' that starts with a value 0 at the beginning of the script
-# The count variable should update itself with +1 per RELEVANT iteration to keep count of the number of RELEVANT iterations
+# The count variable should update itself with +1 per RELEVANT iteration 
+# to keep count of the number of RELEVANT iterations
 # count += 1 (=> is adding 1 to the original value of the variable)
 
 # TIP 2: if 'break' is used in a for loop, the loops terminates immediately
