@@ -8,4 +8,4 @@
 # Eric  Math    B
 # Eric  English B
 
-# From this list dictionary, print Eric’s and Mark’s math scores to the console
+# From this list dictionary, print Eric’s and Mark’s math scores to the console on two separate lines
