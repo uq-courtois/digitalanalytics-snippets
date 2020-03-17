@@ -50,5 +50,3 @@ print(names_with_a)
 
 
 # At the end of the for loop, two values will have been added: Wang and Lisa
-
-
