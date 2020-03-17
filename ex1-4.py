@@ -1,4 +1,4 @@
-# Define a dictionary with three key-value pairs:
+# Define a dictionary with three key-value pairs
 # Key 'name' with value 'Jane'
 # Key 'age' with value 25
 # Key 'sex' with value 'F'
