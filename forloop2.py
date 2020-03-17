@@ -49,4 +49,4 @@ print(names_with_a)
 # are printed to the console
 
 
-# At the end of the for loop, two values will have been added: Wang and Lisa
+# Long story short: at the end of the for loop, two values will have been added: Wang and Lisa
