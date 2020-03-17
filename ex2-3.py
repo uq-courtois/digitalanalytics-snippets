@@ -1,4 +1,4 @@
-### Exercise 3
+### EXERCISE 3
 
 # Read the data from searchresults.csv (http://www.cedriccourtois.be/files/searchresults.csv)
 # Print the unique domain names extracted from all results (url variable in the data file)
