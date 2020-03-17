@@ -13,18 +13,41 @@ for item in numbers:
 # Note: each element, without exception is multiplied by 5 and printed
 
 names = ['Eric','Wang','Lisa']
+names_with_a = []
 
 for item in names:
   if 'a' in item:
-    print(item)
-    
+    names_with_a.append(item)
+print(names_with_a)                
+                        
 # Output:
-# Wang
-# Lisa
+# ['Wang','Lisa']
 
-# Note: only values of the iteration variable 'item' with an 'a' in it are printed. 
-# This is because the code in the for loop contains a conditional that requires an 'a'
-# to execute the code it wraps, which is the print-statement.
-# During the first iteration, item will contain the value 'Eric', but nothing
-# is done with it because there is no particular instruction. The iteration will
-# just pass and move on to Wang, which does contain an 'a', and will be printed.
+# Note: the for loop will iterate through all three names, one by one:
+# Iteration 1: Eric
+# Iteration 2: Wang
+# Iteration 3: Lisa
+
+# When there is an 'a' in the value of item (conditional on line 19), 
+# the program will append the value of 'item' to the originally empty list.
+
+# Iteration 1: Eric > conditional is False, code wrapped in if-statement is
+# ignored and the program moves to second iteration
+
+# Iteration 2: Wang > condition is True, code wrapped in the if-statement is executed:
+# the value of iteration variable 'item' 'Wang' is added to the empty list 'names_with_a',
+# and the program moves to the third iteration
+
+# Iteration 3: Lisa > condition is True, code wrapped in the if-statement is executed:
+# the value of iteration variable item 'Lisa' is added to the list 'names_with_a', which
+# up until then only contains the value 'Wang' (added in the second iteration)
+
+# After iteration 3, the for loop is termined because all elements are looped through
+# We return to the original indentation level and print 'names_with_a'
+# The last contents of 'names_with_a' (i.e., at the end of the third and final iteration)
+# are printed to the console
+
+
+# At the end of the for loop, two values will have been added: Wang and Lisa
+
+
