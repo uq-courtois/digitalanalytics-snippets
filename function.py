@@ -3,17 +3,20 @@ def calculation(number):
 	return number
 
 number = 5 # Value of number is set to 5
-print(calculation(number)) # We feed value of number (i.e., 5) into function and print the returned result (i.e., 25)
+# We feed value of number (i.e., 5) into function and print the returned result (i.e., 25)
+print(calculation(number)) 
 
 # Some other code...
 
 number = 6
-print(calculation(number)) # We feed value of number (i.e., 6) into function and print the returned result (i.e., 30)
+# We feed value of number (i.e., 6) into function and print the returned result (i.e., 30)
+print(calculation(number)) 
 
 # Yet some other code
 
 number = 9
-print(calculation(number)) # We feed value of number (i.e., 9) into function and print the returned result (i.e., 45)
+# We feed value of number (i.e., 9) into function and print the returned result (i.e., 45)
+print(calculation(number)) 
 
 # Output:
 # 25
