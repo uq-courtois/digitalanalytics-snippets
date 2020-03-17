@@ -6,7 +6,7 @@ newdata = [
         ]
 
 # Create a new CSV file, called newfile.csv:
-csv_file = open('newfile.csv','a') # Open a new file, called imdprocessed.csv, allow to append information
+csv_file = open('newfile.csv','a') # Open a new file, called newfile.csv, allow to append information
 csv_writer = csv.writer(csv_file, delimiter=';') # Define csv writer, set the delimiter
 csv_writer.writerow(['Course','Grade']) # Write the first row, containing variable names - DO THIS ONLY ONCE...
 csv_file.close # Close file
