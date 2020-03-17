@@ -18,6 +18,7 @@ names_with_a = []
 for item in names:
   if 'a' in item:
     names_with_a.append(item)
+    
 print(names_with_a)                
                         
 # Output:
