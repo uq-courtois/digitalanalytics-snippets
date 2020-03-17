@@ -23,7 +23,7 @@ print(calculation(number))
 # 30
 # 45
 
-# If we change the calculation to add 5, this requires only on change on line 2 (i.e., changing * to +)
+# If we change the calculation to add 5, this requires only one change on line 2 (i.e., changing * to +)
 # In this example, the instruction is simple and does not
 # really save space, but it would if the calculation would
 # be more complicated and hence require more lines of code
