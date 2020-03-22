@@ -1,9 +1,11 @@
-import csv # We need to call this module
+# READING
 
-file = open('csvtutorial.csv', 'r') # CSV file 'csvtutorial.csv' is in the same path as our Python script
+# Import pandas
+import pandas as pd
 
-importdata = csv.DictReader(file, delimiter=',') # File contents written into list of dictionaries named 'importdata'
-# Note that the delimiter is a comma. Always check what delimiter your CSV file uses. I might as well be a semi-colon ';'
+data = pd.read_csv('newdata.csv',sep=';') # Reading data from csv
+data = data.T.to_dict().values() # Converting dataframe into list of dictionaries
 
-for item in importdata: # We loop through the data to get a grasp of it and/or to process/manipulate it further...
-    print(item['Name'],'is',item['Age'],'years old')
+# Iterate through the imported data
+for item in data:
+	print(item)
