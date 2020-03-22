@@ -1,3 +1,7 @@
+# Import csv module
+
+import csv
+
 # New data, hardcoded into our script:
 newdata = [
         {'Course':'Maths','Grade':'14'},
