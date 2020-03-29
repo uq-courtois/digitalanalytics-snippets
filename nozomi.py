@@ -14,7 +14,7 @@ print(decomposed)
 print(decomposed[2])
 
 # I'm not sure about your second question. After converting to a set and turning back into a list, it should have dropped from 5 to 2 elements.
-# In the list domainnames that you have after the loop, there are duplicates 2 sets of either 3 or 2 the same domainnames. To keep only the unique domainnames, we convert to a set (which drops te duplicates, and then get back to a list from that set)
+# In the list domainnames that you have after the loop, there are duplicates. There's 2 sets of either 3 or 2 of the same domainnames. To keep only the unique domainnames, we convert to a set (which drops te duplicates, and then get back to a list from that set)
 
 domainnames = [
 'www.news.com.au',
