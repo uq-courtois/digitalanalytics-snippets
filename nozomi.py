@@ -9,7 +9,7 @@ decomposed = url.split('/')
 print(decomposed)
 
 # Composed is a list with the following values: ['https:', '', 'www.abc.net.au', 'news', '2020-03-11', 'bear-market-share-stocks-investing-superannuation-coronavirus', '12046630']
-# We need to have the third element, which as an index 2
+# We need to get the third element (1,2,3), which has an index 2 (0,1,2)
 
 print(decomposed[2])
 
@@ -24,5 +24,5 @@ domainnames = [
 'www.abc.net.au',
 ]
 
-print(domainnames) # List contains duplicats, i.e., exact copies of the same value
+print(domainnames) # List contains duplicats, i.e., exact copies of the same value. That the original urls had specific page information is not relevant anymore, because now we are dealing with the domain names)
 print(list(set(domainnames))) # List contains no duplicates
