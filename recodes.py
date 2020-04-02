@@ -15,4 +15,4 @@ print(df['votes'].unique()) # Print all unique values
 df.to_csv(r'imdb_data_recoded.csv', sep = ';') # Save processed version of data file
 df = pd.read_csv('imdb_data_recoded.csv', sep = ';') # Import new version of data file
 
-print(df.info() # Give overview of data types (see last column)
+print(df.info()) # Give overview of data types (see last column)
