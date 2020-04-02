@@ -38,3 +38,5 @@ df.to_csv(r'imdb_data_recoded.csv', sep = ';') # Save processed version of data 
 df = pd.read_csv('imdb_data_recoded.csv', sep = ';') # Import new version of data file
  
 print(df.info()) # Give overview of data types (see last column)
+pd.set_option('display.max_columns',10) # Forcing to show all 10 colums
+print(df) # Give overview of values
