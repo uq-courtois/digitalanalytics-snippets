@@ -6,7 +6,7 @@ df = pd.read_csv('imdb_data_clean.csv', delimiter = ';')
 
 pd.set_option('max_rows', 9999) # Set minimum of rows to show, in/decrease to needs
 
-### MEAN, STANDARD DEVIATION, MEDIAN
+### MEAN, STANDARD DEVIATION (std), MEDIAN (50%)
 print(df['duration'].describe())
 
 ### HISTOGRAM
