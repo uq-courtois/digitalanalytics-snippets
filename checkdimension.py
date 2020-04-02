@@ -14,7 +14,8 @@ print(df[['title','year']]) # Overview two or more variables
 
 print(df['title'].head(30)) # Get the 30 first values of the title variable
 
-subset = df[df['title'] == 'Lady and the Tramp'] # Subset (narrow down) df to a particular value for a variable and storing as a new df called subset
+# Subset (narrow down) df to a particular value for a variable and storing as a new df called subset
+subset = df[df['title'] == 'Lady and the Tramp']
 print(subset[['title','year']]) # Print values for variables title and year in the dataframe called subset
 
 # or shorter...
