@@ -20,6 +20,7 @@ plt.bar(catsum['Outcome'],catsum['Count'])
 
 # Saving the image to a file
 plt.savefig('productionlocation-absolute-barchart.pdf')
+plt.clf() # Clear figure
 
 ### BART CHART
 plt.bar(catsum['Outcome'],catsum['Percent'])
@@ -28,6 +29,7 @@ plt.bar(catsum['Outcome'],catsum['Percent'])
 
 # Saving the image to a file
 plt.savefig('productionlocation-relative-barchart.pdf')
+plt.clf() # Clear figure
 
 # For extensive customisation options of bar charts in plt: see https://matplotlib.org/3.1.0/api/_as_gen/matplotlib.pyplot.bar.html
 
