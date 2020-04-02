@@ -34,8 +34,8 @@ def location_categorisation(x):
  
 df['productionlocation'] = df['countries'].apply(lambda x: location_categorisation(x)) # For every value in the variable countries a labmda function applies the function location_categorisation
 
-df.to_csv(r'imdb_data_recoded.csv', sep = ';') # Save processed version of data file
-df = pd.read_csv('imdb_data_recoded.csv', sep = ';') # Import new version of data file
+df.to_csv(r'imdb_data_clean.csv', sep = ';') # Save processed version of data file
+df = pd.read_csv('imdb_data_clean.csv', sep = ';') # Import new version of data file
  
 print(df.info()) # Give overview of data types (see last column)
 pd.set_option('display.max_columns',10) # Forcing to show all 10 colums
