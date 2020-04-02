@@ -34,7 +34,7 @@ def location_categorisation(x):
  
 df['productionlocation'] = df['countries'].apply(lambda x: location_categorisation(x)) # For every value in the variable countries a labmda function applies the function location_categorisation
 
-df['agefilm'] = 2020 - df['year'] # Calculate age of movie
+df['agefilm'] = 2020 - df['year'].astype(float) # Calculate age of movie
 
 df.to_csv(r'imdb_data_clean.csv', sep = ';') # Save processed version of data file
 df = pd.read_csv('imdb_data_clean.csv', sep = ';') # Import new version of data file
