@@ -1,6 +1,6 @@
-import pandas as pd # To handle/analyse data
-import researchpy as rp # To generate concise tables
-import matplotlib.pyplot as plt # To create visualisations
+import pandas as pd
+import researchpy as rp
+import matplotlib.pyplot as plt
 
 df = pd.read_csv('imdb_data_clean.csv', delimiter = ';') 
 
@@ -19,7 +19,15 @@ plt.bar(catsum['Outcome'],catsum['Count'])
 # bar height based on count figures of catsum
 
 # Saving the image to a file
-plt.savefig('productionlocation-barchart.pdf')
+plt.savefig('productionlocation-absolute-barchart.pdf')
+
+### BART CHART
+plt.bar(catsum['Outcome'],catsum['Percent'])
+# x-labels based on outcome strings of catsum
+# bar height based on percentage figures of catsum
+
+# Saving the image to a file
+plt.savefig('productionlocation-relative-barchart.pdf')
 
 # For extensive customisation options of bar charts in plt: see https://matplotlib.org/3.1.0/api/_as_gen/matplotlib.pyplot.bar.html
 
