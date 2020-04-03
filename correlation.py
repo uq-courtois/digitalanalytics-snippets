@@ -14,7 +14,7 @@ print(rp.correlation.corr_pair(df[['agefilm', 'rating']]))
 
 ### SCATTERPLOT
 plt.scatter(df['agefilm'],df['rating']) # Build plot
-plt.xlabel('Year of release') # x-axis label
+plt.xlabel('Age of Movie') # x-axis label
 plt.ylabel('IMDB user rating') # y-axis label
 plt.savefig('scatterplot.pdf') # Save figure
 plt.clf() # Clear figure
