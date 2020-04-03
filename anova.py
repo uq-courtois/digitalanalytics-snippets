@@ -24,6 +24,5 @@ plt.clf() # Clear figure
 print(rp.summary_cont(df['rating'].groupby(df['productionlocation'])))
 
 # Welch's ANOVA
-
 aov = welch_anova(dv='rating', between='productionlocation', data=df)
 print(aov)
