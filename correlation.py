@@ -3,7 +3,6 @@ import researchpy as rp
 import matplotlib.pyplot as plt
 
 df = pd.read_csv('imdb_data_clean.csv', delimiter = ';') 
-print(df.info())
 
 ### CORRELATION
 print(rp.correlation.corr_pair(df[['agefilm', 'rating']]))
