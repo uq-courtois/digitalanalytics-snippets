@@ -1,7 +1,5 @@
 import pandas as pd
-import researchpy as rp
 import matplotlib.pyplot as plt
-from pingouin import welch_anova, read_dataset
 
 df = pd.read_csv('imdb_data_clean.csv', delimiter = ';') 
 
