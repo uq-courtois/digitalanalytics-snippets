@@ -5,7 +5,7 @@ from scipy import stats
 
 df = pd.read_csv('imdb_data_clean.csv', delimiter = ';') 
 
-### BOX PLOTS OF TWO GROUPS FOR A VARIABLE
+### BAR PLOTS OF TWO GROUPS FOR A VARIABLE
 
 # Subset two groups
 l_sfx = df[df['sfxgenre']=='lower sfx']['rating']
