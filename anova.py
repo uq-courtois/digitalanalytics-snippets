@@ -22,6 +22,7 @@ plt.clf() # Clear figure
 
 # Get descriptive table by category
 print(rp.summary_cont(df['rating'].groupby(df['productionlocation'])))
+pd.set_option('max_columns', 9999)
 
 # Welch's ANOVA
 aov = welch_anova(dv='rating', between='productionlocation', data=df)
