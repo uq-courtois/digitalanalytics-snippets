@@ -1,4 +1,4 @@
-print(df.info() # Give overview of data types (see last column)
+print(df.info()) # Give overview of data types (see last column)
 
 print(df['year'].unique()) # Print all unique values
 df['year'] = df['year'].str[-5:-1] # Retaining a specific range
