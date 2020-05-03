@@ -25,11 +25,11 @@ def location_categorisation(x):
 
   ### The conditionals that channel the actual categorisation:
 
-	if 'US' in countries and len(countries) == 1:
+	if 'USA' in countries and len(countries) == 1:
 		return 'USA'
-	if 'US' in countries and len(countries) > 1:
+	if 'USA' in countries and len(countries) > 1:
 		return 'Coproduction'
-	if 'US' not in countries and len(countries) >= 1:
+	if 'USA' not in countries and len(countries) >= 1:
 		return 'Non-USA'
     
 ######
