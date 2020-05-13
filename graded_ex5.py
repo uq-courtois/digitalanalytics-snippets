@@ -14,7 +14,7 @@ df['year'] = df['published'].str[-4:] # Retaining a specific range
 
 # 4. Create a new variable that marks video’s with less than 1 million views with a value 0, and video’s with 1 million or more views as a 1.
 
-df['viewsover1m'] = df['views'].apply(lambda x: 1 if x > 1000000 else 0)
+df['viewsover1m'] = df['views'].apply(lambda x: 0 if x < 1000000 else 1)
 
 print(df[['published','year','views','viewsover1m']]) # To check...
 
