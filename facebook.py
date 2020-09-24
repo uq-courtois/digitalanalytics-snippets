@@ -24,5 +24,5 @@ print('Successfully harvested',len(fbdata),'Facebook posts')
 
 df = pd.DataFrame(fbdata) 
 df.to_excel('fbdata.xlsx')
-df.to_csv('fbdata.csv',sep=';)
+df.to_csv('fbdata.csv',sep=';',index=None)
 ###
