@@ -32,7 +32,7 @@ quotes = [
 'The ancients dreaded death: the Christian can only fear dying. (Augustus William Hare)',
 'We who engage in nonviolent direct action are not the creators of tension. We merely bring to the surface the hidden tension that is already alive. (Martin Luther King)',
 'I have criticized absent people so often, and then discovered, to my humiliation, that I was talking with their relatives, that I have grown superstitious about that sort of thing and dropped it. (Mark Twain)',
-'The injury that we do to a man must be such that we need not fear his vengeance (Steve Perry)’
+'The injury that we do to a man must be such that we need not fear his vengeance (Steve Perry)'
 ]
 
 #1 Define a list of sentences
