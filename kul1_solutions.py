@@ -38,8 +38,6 @@ print('The cuboid has a volume of',volume,'cubic meters')
 
 ### Exercise 5
 
-### Exercise 5
-
 quotes = [
 'The ancients dreaded death: the Christian can only fear dying. (Augustus William Hare)',
 'We who engage in nonviolent direct action are not the creators of tension. We merely bring to the surface the hidden tension that is already alive. (Martin Luther King)',
