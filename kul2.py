@@ -1,3 +1,11 @@
+### Revise EXERCISE 3 (Module 2)
+ 
+# Read the data from searchresults.csv (http://www.cedriccourtois.be/files/searchresults.csv)
+# Print the unique domain names extracted from all results (url variable in the data file)
+# Count the number of times ‘hln.be’ is in the results
+# Make a new csv file with only the top 3 ranked results (name it searchresults_top3.csv)
+
+
 ### Exercise 1
 
 #1 Read data from the file articletitles.csv with two variables: Title and URL (Download the file from http://www.cedriccourtois.be/files/articletitles.csv) and convert into a list of dictionaries
