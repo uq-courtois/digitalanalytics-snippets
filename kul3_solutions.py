@@ -4,6 +4,7 @@
 from urllib.request import Request, urlopen
 import ssl
 from bs4 import BeautifulSoup
+import pandas as pd
  
 # The URL we want to scrape
 url = 'https://www.who.int/emergencies/diseases/novel-coronavirus-2019/media-resources/news' 
@@ -32,8 +33,18 @@ maindiv = soup.find('div',class_='sf_colsIn col-md-9')
 data = []
 
 for item in maindiv.find_all('a'):
+	
 	title = item.find_all('p')[0].getText()
-	dateinfo = item.find_all('p')[1].getText().split(' I')[0]
+
+	try:
+		dateinfo = item.find_all('p')[1].getText().split(' I')[0]
+	except:
+
+		try:
+			dateinfo = item.find('span',class_='timestamp').getText()
+		except:
+			dateinfo = ''
+
 	url = item['href']
 
 	print(title)
