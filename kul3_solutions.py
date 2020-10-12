@@ -1,3 +1,6 @@
+#####
+##### EXERCISE 1
+
 from urllib.request import Request, urlopen
 import ssl
 from bs4 import BeautifulSoup
@@ -45,3 +48,6 @@ for item in maindiv.find_all('a'):
 
 data = pd.DataFrame(data) # Converting list of dictionaries into dataframe
 data.to_csv('who-news.csv',sep=';',index=False) # Writing dataframe into CSV file
+
+#####
+##### EXERCISE 2
