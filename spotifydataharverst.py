@@ -1,5 +1,5 @@
 # You are about to this endpoint: https://developer.spotify.com/console/get-current-user-top-artists-and-tracks
-# IMPORTANT!!! Get a new OAuth Token: click token and select user-read-recently-played at the bottom right
+# IMPORTANT!!! Get a new OAuth Token: click get token and select user-read-recently-played at the bottom right
 # Run the script, click apidata.csv in your Repl.it
 # Select the contents wihtin that file and copy it to an empty plain text text editor file. Save as apidata.csv
 # Upload it to Toledo
