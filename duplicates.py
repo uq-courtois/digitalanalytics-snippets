@@ -3,6 +3,7 @@ print(df[df['title'] == 'Lady and the Tramp'][['title','year']]) # lady and the 
 ### Get rid of exact duplicates 
 
 print(df.duplicated().sum()) # Number of exact duplicates
+print(df[df.duplicated()]) # Showing rows with duplicates
 df = df.drop_duplicates() # Drop exact duplicates
 
 ### Get rid of duplicates for a subset of variables
