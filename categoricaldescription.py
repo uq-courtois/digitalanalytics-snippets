@@ -2,9 +2,10 @@ import pandas as pd
 import researchpy as rp
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('imdb_data_clean.csv', delimiter = ';') 
+df = pd.read_csv('http://www.digitalanalytics.id.au/static/files/imdb_data_clean.csv', delimiter = ',') 
 
-pd.set_option('max_rows', 9999) # Set minimum of rows to show, in/decrease to needs
+# Set max of rows to show, in/decrease to needs
+pd.set_option('max_rows', 9999) 
 
 ### MODE, FREQUENCIES, AND COUNTS
 catsum = rp.summary_cat(df['productionlocation'])
@@ -29,9 +30,13 @@ plt.bar(catsum['Outcome'],catsum['Percent'])
 
 # Saving the image to a file
 plt.savefig('productionlocation-relative-barchart.pdf')
-plt.clf() # Clear figure
+# Forces tidy plot lay-out
+plt.tight_layout()
+# Clear figure
+plt.clf() 
 
-# For extensive customisation options of bar charts in plt: see https://matplotlib.org/3.1.0/api/_as_gen/matplotlib.pyplot.bar.html
+# For extensive customisation options of bar charts in plt: 
+# see https://matplotlib.org/3.1.0/api/_as_gen/matplotlib.pyplot.bar.html
 
 print()
 
