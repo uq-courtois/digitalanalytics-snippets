@@ -3,7 +3,7 @@ import researchpy as rp
 import matplotlib.pyplot as plt
 from pingouin import welch_anova, read_dataset
 
-df = pd.read_csv('imdb_data_clean.csv', delimiter = ';') 
+df = pd.read_csv('http://www.digitalanalytics.id.au/static/files/imdb_data_clean.csv', delimiter = ',') 
 
 ### BAR PLOTS OF THREE GROUPS FOR A VARIABLE
 
@@ -17,6 +17,7 @@ std = (usa.std(),coprod.std(),nonusa.std()) # Calculating standard deviations
 positions = [0, 1,2] # Defining positions in the graph
 plt.bar(positions, means, yerr=std) # Compiling the plot
 plt.xticks(positions,['USA', 'Coproduction','Non-USA'],rotation="horizontal") # Adding labels
+plt.tight_layout() # Forces tidy plot lay-out
 plt.savefig("barmeanstd3+.pdf") # Save figure
 plt.clf() # Clear figure
 
