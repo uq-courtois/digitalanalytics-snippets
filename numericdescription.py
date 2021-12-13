@@ -14,9 +14,9 @@ print(df['duration'].describe())
 # Render histogram (By increasing the bins number, you smoothen the graph)
 plt.hist(df['duration'], bins=100)
 
-# Save figure as pdf
-plt.savefig('histo_duration.pdf')
 # Forces tidy plot lay-out
 plt.tight_layout()
+# Save figure as pdf
+plt.savefig('histo_duration.pdf')
 # Clear figure
 plt.clf() 
