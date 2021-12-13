@@ -1,9 +1,9 @@
 import pandas as pd
 import researchpy as rp
 import matplotlib.pyplot as plt
-from pingouin import welch_anova, read_dataset
+from pingouin import welch_anova
 
-df = pd.read_csv('http://www.digitalanalytics.id.au/static/files/imdb_data_clean.csv', delimiter = ',') 
+df = pd.csv('http://www.digitalanalytics.id.au/static/files/imdb_data_clean.csv', delimiter = ',') 
 
 ### BAR PLOTS OF THREE GROUPS FOR A VARIABLE
 
