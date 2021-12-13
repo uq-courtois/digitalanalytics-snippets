@@ -8,14 +8,13 @@ df = pd.read_csv('http://www.digitalanalytics.id.au/static/files/imdb_data_clean
 ### BAR PLOTS OF THREE GROUPS FOR A VARIABLE
 
 # Subset three groups
-usa = df[df['productionlocation']=='USA']['rating']
-coprod = df[df['productionlocation']=='Coproduction']['rating']
-nonusa = df[df['productionlocation']=='Non-USA']['rating']
+group1 = df[df['productionlocation']=='USA']['rating']
+group2 = df[df['productionlocation']=='Coproduction']['rating']
+group3 = df[df['productionlocation']=='Non-USA']['rating']
 
-means = (usa.mean(),coprod.mean(),nonusa.mean()) # Calculating means
-std = (usa.std(),coprod.std(),nonusa.std()) # Calculating standard deviations
+means = (group1.mean(),group2.mean(),group3.mean()) # Calculating means
 positions = [0, 1,2] # Defining positions in the graph
-plt.bar(positions, means, yerr=std) # Compiling the plot
+plt.bar(positions, means) # Compiling the plot
 plt.xticks(positions,['USA', 'Coproduction','Non-USA'],rotation="horizontal") # Adding labels
 plt.tight_layout() # Forces tidy plot lay-out
 plt.savefig("barmeanstd3+.pdf") # Save figure
