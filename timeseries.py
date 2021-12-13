@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('imdb_data_clean.csv', delimiter = ';') 
+df = pd.read_csv('http://www.digitalanalytics.id.au/static/files/imdb_data_clean.csv', delimiter = ',') 
 
 ### Displaying time series
 
@@ -19,5 +19,9 @@ plt.plot(ymax['year'],ymax['rating'],label="Maximum rating")
 
 # Add a legend
 plt.legend()
+
+# Forces tidy plot lay-out
+plt.tight_layout()
+
 # Save the figure
 plt.savefig('timeseries.pdf')
