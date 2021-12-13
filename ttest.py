@@ -12,9 +12,8 @@ group1 = df[df['sfxgenre']=='lower sfx']['rating']
 group2 = df[df['sfxgenre']=='higher sfx']['rating']
 
 means = (group1.mean(),group2.mean()) # Calculating means
-std = (group1.std(),group2.std()) # Calculating standard deviations
 positions = [0, 1] #Defining positions in the graph
-plt.bar(positions, means, yerr=std) # Compiling the plot
+plt.bar(positions, means) # Compiling the plot
 plt.xticks(positions,['Low SFX', 'High SFX'],rotation="horizontal") # Adding labels
 plt.tight_layout() # Forces tidy plot lay-out
 plt.savefig("barmeanstd.pdf") # Save figure
