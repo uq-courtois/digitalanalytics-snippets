@@ -8,11 +8,11 @@ df = pd.read_csv('http://www.digitalanalytics.id.au/static/files/imdb_data_clean
 ### BAR PLOTS OF TWO GROUPS FOR A VARIABLE
 
 # Subset two groups
-l_sfx = df[df['sfxgenre']=='lower sfx']['rating']
-h_sfx = df[df['sfxgenre']=='higher sfx']['rating']
+group1 = df[df['sfxgenre']=='lower sfx']['rating']
+group2 = df[df['sfxgenre']=='higher sfx']['rating']
 
-means = (l_sfx.mean(),h_sfx.mean()) # Calculating means
-std = (l_sfx.std(),h_sfx.std()) # Calculating standard deviations
+means = (group1.mean(),group2.mean()) # Calculating means
+std = (group1.std(),group2.std()) # Calculating standard deviations
 positions = [0, 1] #Defining positions in the graph
 plt.bar(positions, means, yerr=std) # Compiling the plot
 plt.xticks(positions,['Low SFX', 'High SFX'],rotation="horizontal") # Adding labels
@@ -21,4 +21,4 @@ plt.savefig("barmeanstd.pdf") # Save figure
 plt.clf() # Clear figure
 
 # Calculate and print Welch’s t-test
-print(stats.ttest_ind(l_sfx, h_sfx, equal_var = False))
+print(stats.ttest_ind(group1, group2, equal_var = False))
