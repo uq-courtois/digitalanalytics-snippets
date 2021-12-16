@@ -25,3 +25,6 @@ plt.tight_layout()
 
 # Save the figure
 plt.savefig('timeseries.pdf')
+
+# Clear figure
+plt.clf()
