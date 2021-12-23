@@ -50,7 +50,7 @@ def location_catergorisation(countries):
 	productionlocation = ''
 
 	if type(countries) == str:
-		countries = countries.split(',')
+		countries = countries.split(', ')
 		if 'USA' in countries and len(countries) == 1:
 			productionlocation = 'USA only'
 		if 'USA' not in countries and len(countries) >= 1:
