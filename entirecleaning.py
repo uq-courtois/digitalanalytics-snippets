@@ -1,44 +1,70 @@
 import pandas as pd
- 
-df = pd.read_csv('imdb_data.csv', delimiter = ';') # Import data
- 
-df = df.drop_duplicates(subset=['title','year','duration']) # Drop duplicates
 
-df['year'] = df['year'].str[-5:-1] # Fix year variable
-df['duration'] = df['duration'].str.replace(' min','') # Fix duration variable
-df['votes'] = df['votes'].str.replace(',','') # Fix votes variable
+# Step 1: Read the data
+df = pd.read_csv('http://www.digitalanalytics.id.au/static/files/imdb_data.csv', delimiter = ',')
 
-df['sfxgenre'] = df['genres'].apply(lambda x: 'higher sfx' if 'Action' in x or 'Fantasy' in x or 'Sci-Fi' in x or 'Adventure' in x or 'Animation' in x else 'lower sfx') # Categorisation of genres
+# Step 2: Get an overview of the variables
+print(df.info())
 
-countrydata = pd.read_csv('countries-continents.csv', sep=',') # Read external country data
-countrydata = countrydata.T.to_dict().values() # Transform into a list of dictionaries
-  
-def location_categorisation(x):
+# Step 3: Check for duplicates
+print('\n# Exact duplicates:',df.duplicated().sum()) 
+print('\n# Rows with duplicates:\n',df[df.duplicated()])
+print('\n# Shape before removing duplicates:\n',df.shape)
+df = df.drop_duplicates() # Get rid of duplicates
+print('\n# Shape after removing duplicates:\n',df.shape)
+
+# Step 4: Check for missing values
+print('\n # Missing data:\n',df.isnull().sum())
+isolatemissing = pd.isnull(df['year'])
+print('\n Rows with missing data in year:\n',df[isolatemissing])
+print('\n# Shape before removing missings:\n',df.shape)
+df = df.dropna(subset=['year']) # Get rid of observations in year with missing values
+print('\n# Shape after removing missings:\n',df.shape)
+
+# Step 5: Convert strings into numerics
+print(df['year'].head(25)) # print 25 first observations
+df['year'] = df['year'].str[-5:-1].astype(int)
+print(df['year'].head(25)) # print 25 first observations
+
+# Step 6: Create categorisations
+
+### Divide between genres prone to special effects and those less so
+
+print(df['genres'].head(25))
+
+def specialeffects(genres):
+	if 'Action' in genres or 'Fantasy' in genres or 'Sci-Fi' in genres or 'Adventure' in genres or 'Animation' in genres:
+		sfxgenre = 'higher sfx'
+	else:
+		sfxgenre = 'lower sfx'
+	return sfxgenre
 	
-	countries = [] # Empty list that will store the actual countries found in each value of x
- 
-	for item in countrydata:
-		try:
-			if item['Country'] in x:
-				countries.append(item['Country']) # Adding a country to the list when it is found in x
-		except:
-			pass
- 
-  ### The conditionals that channel the actual categorisation:
-	if 'USA' in countries and len(countries) == 1:
-		return 'USA'
-	if 'USA' in countries and len(countries) > 1:
-		return 'Coproduction'
-	if 'USA' not in countries and len(countries) >= 1:
-		return 'Non-USA'
- 
-df['productionlocation'] = df['countries'].apply(lambda x: location_categorisation(x)) # For every value in the variable countries a labmda function applies the function location_categorisation
+df['sfxgenre'] = df['genres'].apply(lambda x: specialeffects(x))
+print(df[['genres','sfxgenre']])
 
-df['agefilm'] = 2020 - df['year'].astype(float) # Calculate age of movie
+### Divide location of production studio in only USA, collaborations between USA and others, and only others
 
-df.to_csv(r'imdb_data_clean.csv', sep = ';') # Save processed version of data file
-df = pd.read_csv('imdb_data_clean.csv', sep = ';') # Import new version of data file
- 
-print(df.info()) # Give overview of data types (see last column)
-pd.set_option('display.max_columns',10) # Forcing to show all 10 colums
-print(df) # Give overview of values
+print(df['countries'].head(25))
+
+def location_catergorisation(countries):
+	productionlocation = ''
+
+	if type(countries) == str:
+		countries = countries.split(',')
+		if 'USA' in countries and len(countries) == 1:
+			productionlocation = 'USA only'
+		if 'USA' not in countries and len(countries) >= 1:
+			productionlocation = 'Non-USA'
+		if 'USA' in countries and len(countries) > 1:
+			productionlocation = 'Coproduction'
+
+		return productionlocation
+
+df['productionlocation'] = df['countries'].apply(lambda x: location_catergorisation(x))
+print(df[['productionlocation','countries']])
+
+# Step 7: Get final overview
+print(df.info())
+
+# Step 8: Write data into clean file without row numbers
+df.to_csv('imdb_data_clean.csv',index=False)
