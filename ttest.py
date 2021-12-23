@@ -10,6 +10,11 @@ df = pd.read_csv('http://www.digitalanalytics.id.au/static/files/imdb_data_clean
 # Subset two groups
 group1 = df[df['sfxgenre']=='lower sfx']['rating']
 group2 = df[df['sfxgenre']=='higher sfx']['rating']
+print('Group means:',round(group1.mean(),2),round(group2.mean(),2))
+print('Group stds:',round(group1.std(),2),round(group2.std(),2))
+
+degreesoffreedom = (len(group1)+len(group2)-2)
+print('Degrees of freedom',degreesoffreedom)
 
 means = (group1.mean(),group2.mean()) # Calculating means
 positions = [0, 1] #Defining positions in the graph
