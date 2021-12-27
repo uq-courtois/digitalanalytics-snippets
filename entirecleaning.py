@@ -70,4 +70,4 @@ print(df[['Country','productionlocation']])
 print(df.info())
 
 # Step 8: Write data into clean file without row numbers
-df.to_csv('imdb_data_clean.csv',index=False)
+df.to_csv('imdb_series_clean.csv',index=False)
