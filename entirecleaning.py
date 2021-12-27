@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
  
 # Step 1: Read the data
-df = pd.read_csv('consolidated_omdb.csv', delimiter = ',')
+df = pd.read_csv('df = pd.read_csv('http://www.digitalanalytics.id.au/static/files/consolidated_omdb.csv', delimiter = ',')
  
 # Step 2: Get an overview of the variables
 print(df.info())
