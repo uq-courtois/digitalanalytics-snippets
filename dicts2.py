@@ -5,10 +5,10 @@ x = [
 ]
 
 # Access/print the 'Height' value in the first dictionary
-print(x[0)['Height']
+print(x[0])['Height']
 
 # Access/print the 'Height' value in the second dictionary
-print(x[1)['Height']
+print(x[1])['Height']
 
 # Access/print the 'Weight' value in the third dictionary
-print(x[2)['Weight']
+print(x[2])['Weight']
