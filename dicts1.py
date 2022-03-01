@@ -5,10 +5,10 @@ x = [
 ]
 
 # Access/print the first dictionary
-print(x[0) # index 0 = first
+print(x[0]) # index 0 = first
         
 # Access/print the second dictionary
-print(x[1) # index 1 = second
+print(x[1]) # index 1 = second
          
 # Access/print the third dictionary
-print(x[2) # index 2 = third
+print(x[2]) # index 2 = third
