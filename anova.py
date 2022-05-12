@@ -3,7 +3,7 @@ import researchpy as rp
 import matplotlib.pyplot as plt
 from pingouin import welch_anova
 
-df = pd.csv('http://www.digitalanalytics.id.au/static/files/imdb_data_clean.csv', delimiter = ',') 
+df = pd.csv('http://www.digitalanalytics.id.au/static/files/imdb_data_clean.csv', sep = ',') 
 
 ### BAR PLOTS OF THREE GROUPS FOR A VARIABLE
 
@@ -22,7 +22,7 @@ plt.clf() # Clear figure
 
 # Get descriptive table by category
 print(rp.summary_cont(df['rating'].groupby(df['productionlocation'])))
-pd.set_option('max_columns', 9999)
+pd.set_option('display.max_columns', 9999)
 
 # Welch's ANOVA
 aov = welch_anova(dv='rating', between='productionlocation', data=df)
