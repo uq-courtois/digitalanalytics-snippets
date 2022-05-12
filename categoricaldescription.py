@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 df = pd.read_csv('http://www.digitalanalytics.id.au/static/files/imdb_data_clean.csv', delimiter = ',') 
 
 # Set max of rows to show, in/decrease to needs
-pd.set_option('max_rows', 9999) 
+pd.set_option('display.max_rows', 9999) 
 
 ### MODE, FREQUENCIES, AND COUNTS
 catsum = rp.summary_cat(df['productionlocation'])
